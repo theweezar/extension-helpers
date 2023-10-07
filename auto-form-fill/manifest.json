@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "Auto Form Fill",
+    "description": "Auto Form Fill",
+    "version": "1.0",
+    "action": {
+        "default_popup": "popup/index.html",
+        "default_icon": "static/icon/icon.png"
+    },
+    "icons": {
+        "16": "static/icon/icon.png",
+        "32": "static/icon/icon.png",
+        "48": "static/icon/icon.png",
+        "128": "static/icon/icon.png"
+    },
+    "author": {
+        "email": "minhducducminh1999@gmail.com"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "index.js"
+            ],
+            "matches": [
+                "https://*/*",
+                "http://*/*"
+            ]
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "storage",
+        "scripting",
+        "windows"
+    ],
+    "host_permissions": [
+        "*://*/*"
+    ]
+}
